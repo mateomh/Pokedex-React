@@ -1,0 +1,45 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background: linear-gradient(45deg, white 0% 50%, rgba(235, 50, 34, 0.8) 60% 100%);
+  padding: 5vh;
+}
+
+.Name {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.Image {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  width: 90%;
+}
+
+.Info {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Prompt', sans-serif;
+  font-size: 3vh;
+  border: 1px solid gray;
+}
+
+.Title {
+  background-color: var(--color-3);
+  font-weight: bold;
+}
+
+.Data {
+  background-color: whitesmoke;
+}
