@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './components/app';
+import PokeDex from './components/pokedex';
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={PokeDex} />
       {/* <Route exact path="/home" component={Home} />
       <Route exact path="/quote" component={Quotes} /> */}
     </Switch>

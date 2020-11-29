@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import filterReducer from './filter';
-import pokemonReducer from './pokemon';
+import pokemonPageReducer from './pokemon';
 
-const allReducer = combineReducers({
+const rootReducer = combineReducers({
   filter: filterReducer,
-  pokemons: pokemonReducer,
+  pokemons: pokemonPageReducer,
 });
 
-export default allReducer;
+export default rootReducer;
