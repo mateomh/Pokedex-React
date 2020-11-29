@@ -9,4 +9,12 @@ const getPokemons = async (page = 1, numberperpage = 10) => {
   return pokedata;
 };
 
-export default getPokemons;
+const getOnePokemonInfo = async pokemon => {
+  const pokemonUrl = endpointUrl.concat(pokemon);
+
+  const data = await fetch(pokemonUrl);
+  const pokedata = await data.json();
+  return pokedata;
+};
+
+export { getPokemons, getOnePokemonInfo };
