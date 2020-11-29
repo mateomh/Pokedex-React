@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 import * as ApiComms from '../apicomms/apicomms';
+import PokeDexItem from './pokedexitem';
 
 const App = () => {
   const clickHandle = async event => {
@@ -11,11 +12,19 @@ const App = () => {
     console.log(pokemon);
   };
 
+  const img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png';
+  const name = 'Hola';
+  const number = 155;
+
   return (
     <div>
-      <button type="button" onClick={clickHandle}>Test API</button>
-      {/* <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="pokemon" /> */}
-      <img width="150px" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon" />
+      {/* <button type="button" onClick={clickHandle}>Test API</button>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="pokemon" />
+      <img width="150px" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon" /> */}
+      <PokeDexItem image={img} name={name} number={number} />
+      <PokeDexItem image={img} name={name} number={number} />
+      <PokeDexItem image={img} name={name} number={number} />
+      <PokeDexItem image={img} name={name} number={number} />
     </div>
   );
 };
