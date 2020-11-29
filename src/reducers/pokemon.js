@@ -1,15 +1,13 @@
-const defaultstate = [];
+const defaultstate = {};
 
-const pokemonPageReducer = (state = defaultstate, action) => {
+const pokemonReducer = (state = defaultstate, action) => {
   const { type, payload: pokemon } = action;
   switch (type) {
-    case 'ADD_POKEMON':
-      return pokemon;
     case 'CHANGE_POKEMON':
-      return state;
+      return pokemon;
     default:
       return state;
   }
 };
 
-export default pokemonPageReducer;
+export default pokemonReducer;

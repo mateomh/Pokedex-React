@@ -4,12 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 2vh 5vh; */
   padding: 5vh;
   height: 7vh;
   width: 100%;
-  /* background-color: var(--color-5); */
-  /* transform: skewX(-30deg); */
   border-radius: 10px;
 }
 
@@ -23,11 +20,7 @@
 }
 
 .Image {
-  /* width: 17vh;
-  height: 17vh; */
-
-  transform: scale(1.7);
-  /* transform: skewX(30deg); */
+  transform: scale(1);
 }
 
 .Name {
@@ -37,7 +30,6 @@
   color: whitesmoke;
   border-radius: 0px 50px 50px 0px;
   text-align: center;
-  /* transform: skewX(30deg); */
   font-family: 'Prompt', sans-serif;
 }
 
@@ -48,7 +40,6 @@
   width: 30%;
   padding: 0 3vh;
   border-radius: 50px 0px 0px 50px;
-  /* transform: skewX(30deg); */
   font-weight: bolder;
   font-family: 'Prompt', sans-serif;
 }
