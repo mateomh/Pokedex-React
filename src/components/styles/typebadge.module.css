@@ -1,0 +1,86 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vh;
+  height: 5vh;
+  color: whitesmoke;
+  font-size: 2.5vh;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5vh;
+  border-radius: 10px;
+}
+
+.fire {
+  background-color: var(--fire);
+}
+
+.water {
+  background-color: var(--water);
+}
+
+.normal{
+  background-color: var(--normal);
+}
+
+.poison {
+  background-color: var(--poison);
+}
+
+.psychic {
+  background-color: var(--psychic);
+}
+
+.grass{
+  background-color: var(--grass);
+}
+.ground{
+  background: linear-gradient(180deg,var(--ground1) 50%, var(--ground2) 50%);
+}
+
+.ice {
+  background-color: var(--ice);
+}
+
+.rock{
+  background-color: var(--rock);
+}
+
+.bug {
+  background-color: var(--bug);
+}
+
+.dark {
+  background-color: var(--dark);
+}
+
+.fighting {
+  background-color: var(--fight);
+}
+
+.ghost {
+  background-color: var(--ghost);
+}
+
+.steel {
+  background-color: var(--steel);
+}
+
+.electric {
+  background-color: var(--electric);
+}
+
+.fairy {
+  background-color: var(--fairy);
+}
+
+.flying {
+  background: linear-gradient(180deg, var(--fly1) 50%, var(--fly2) 50%);
+}
+
+.dragon {
+  background: linear-gradient(180deg, var(--dragon1) 50%, var(--dragon2) 50%);
+}

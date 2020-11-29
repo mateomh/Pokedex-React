@@ -7,7 +7,7 @@
   margin: 2vh 5vh;
   padding: 5vh;
   height: 7vh;
-  width: 40%;
+  width: 100%;
   /* background-color: var(--color-5); */
   /* transform: skewX(-30deg); */
   border-radius: 10px;
@@ -23,8 +23,10 @@
 }
 
 .Image {
-  width: 15vh;
-  height: 15vh;
+  /* width: 17vh;
+  height: 17vh; */
+
+  transform: scale(1.7);
   /* transform: skewX(30deg); */
 }
 

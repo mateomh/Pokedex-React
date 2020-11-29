@@ -1,0 +1,10 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  background-color: green;
+  margin: 0 auto;
+  padding: 0 5vh;
+  width: 50%;
+}
