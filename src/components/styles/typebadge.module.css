@@ -1,7 +1,7 @@
 @import url("../../assets/stylesheets/general.css");
 
 .Badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 20vh;
@@ -12,6 +12,7 @@
   font-weight: bold;
   letter-spacing: 0.5vh;
   border-radius: 10px;
+  margin: 1vh;
 }
 
 .fire {
@@ -36,9 +37,6 @@
 
 .grass{
   background-color: var(--grass);
-}
-.ground{
-  background: linear-gradient(180deg,var(--ground1) 50%, var(--ground2) 50%);
 }
 
 .ice {
@@ -75,6 +73,10 @@
 
 .fairy {
   background-color: var(--fairy);
+}
+
+.ground{
+  background: linear-gradient(180deg,var(--ground1) 50%, var(--ground2) 50%);
 }
 
 .flying {
