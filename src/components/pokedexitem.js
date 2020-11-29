@@ -6,7 +6,7 @@ const PokeDexItem = props => {
 
   return (
     <div className={PokeDexItemStyles.Item}>
-      <img className={PokeDexItemStyles.Image} src={image} alt="pokemon" />
+      {image && <img className={PokeDexItemStyles.Image} src={image} alt="pokemon" />}
       <p className={PokeDexItemStyles.Number}>
         N°&nbsp;&nbsp;
         {number}
@@ -17,9 +17,13 @@ const PokeDexItem = props => {
 };
 
 PokeDexItem.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   number: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+};
+
+PokeDexItem.defaultProps = {
+  image: undefined,
 };
 
 export default PokeDexItem;
