@@ -35,14 +35,15 @@
   align-items: center;
   font-family: 'Prompt', sans-serif;
   font-size: 3vh;
-  border: 1px solid gray;
+  border: 1px solid whitesmoke;
 }
 
 .Title {
-  background-color: var(--color-3);
+  background-color: var(--color-4);
   font-weight: bold;
+  color: white;
 }
 
 .Data {
-  background-color: whitesmoke;
+  background-color: white;
 }

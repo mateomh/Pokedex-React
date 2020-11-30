@@ -13,7 +13,7 @@ import AppStyles from './styles/app.module.css';
 import PokeFilter from './pokefilter';
 
 const PokeDex = props => {
-  const { pokemons, page } = props;
+  const { pokemons, page, filter: filterValue } = props;
 
   const clickHandle = selectedPokemon => {
     const pokemonInfo = pokemons.find(pokemon => pokemon.name === selectedPokemon);
@@ -22,12 +22,20 @@ const PokeDex = props => {
     props.history.push('/info');
   };
 
-  const sortedPokemons = pokemons.sort((a, b) => a.id - b.id);
+  let filteredPokemons = pokemons;
+
+  if (filterValue !== 'All') {
+    const type1 = pokemons.filter(item => item.types[0] === filterValue);
+    const type2 = pokemons.filter(item => item.types[1] === filterValue);
+    filteredPokemons = [...type1, ...type2];
+  }
+
+  filteredPokemons = filteredPokemons.sort((a, b) => a.id - b.id);
 
   return (
     <>
       <PokeFilter />
-      {sortedPokemons.map((pokemon, index) => (
+      {filteredPokemons.map((pokemon, index) => (
         <PokeDexItem
           key={pokemon.name}
           clickFcn={clickHandle}
@@ -48,11 +56,13 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({
   pokemons: state.pokemons,
   page: state.page,
+  filter: state.filter,
 });
 
 PokeDex.propTypes = {
   pokemons: PropTypes.array.isRequired,
   page: PropTypes.number.isRequired,
+  filter: PropTypes.string.isRequired,
   updatePokemon: PropTypes.func.isRequired,
   addPokemon: PropTypes.func.isRequired,
   history: PropTypes.any.isRequired,
