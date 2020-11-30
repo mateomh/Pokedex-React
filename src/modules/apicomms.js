@@ -16,6 +16,7 @@ const getPokemons = async (page = 1, numberperpage = 10) => {
 
 const getOnePokemonInfo = async pokemon => {
   const pokemonUrl = endpointUrl.concat(pokemon);
+
   const pokedata = getDataFromApi(pokemonUrl);
   return pokedata;
 };

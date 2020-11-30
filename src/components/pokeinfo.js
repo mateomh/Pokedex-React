@@ -1,50 +1,54 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable no-unused-vars */
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import PokeInfoStyles from './styles/pokeinfo.module.css';
 import TypeBadge from './typebadge';
 import PokeDexItem from './pokedexitem';
 
 const PokeInfo = props => {
+  const { pokemon } = props;
+  console.log(pokemon);
   const {
+    id,
     name,
-    image,
-    type1,
-    type2,
-    height,
+    imagesm,
+    imagelg,
+    types,
     weight,
-  } = props;
+    height,
+  } = pokemon;
 
   return (
     <div className={PokeInfoStyles.Card}>
       {/* <p className={PokeInfoStyles.Name}>{name}</p> */}
       <div className={PokeInfoStyles.Name}>
-        <PokeDexItem image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" name={name} number={1} />
+        <PokeDexItem image={imagesm} name={name} number={id} />
       </div>
-      <img className={PokeInfoStyles.Image} src={image} alt="pokemon big" />
+      <img className={PokeInfoStyles.Image} src={imagelg} alt="pokemon big" />
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Type</p>
       <div className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>
-        <TypeBadge type={type1} />
-        {type2 && <TypeBadge type={type2} />}
+        {/* <TypeBadge type={type1} />
+        {type2 && <TypeBadge type={type2} />} */}
+        {types.map(type => (
+          <TypeBadge key={type} type={type} />
+        ))}
       </div>
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Height (m)</p>
-      <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>{height * 0.1}</p>
+      <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>{(height * 0.1).toFixed(2)}</p>
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Weight (Kg)</p>
-      <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>{weight * 0.1}</p>
+      <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>{(weight * 0.1).toFixed(2)}</p>
     </div>
   );
 };
 
 PokeInfo.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  type1: PropTypes.string.isRequired,
-  type2: PropTypes.string,
-  height: PropTypes.number.isRequired,
-  weight: PropTypes.number.isRequired,
+  pokemon: PropTypes.object.isRequired,
 };
 
-PokeInfo.defaultProps = {
-  type2: undefined,
-};
+const mapStateToProps = state => ({
+  pokemon: state.currentPokemon,
+  page: state.page,
+});
 
-export default PokeInfo;
+export default connect(mapStateToProps)(PokeInfo);
