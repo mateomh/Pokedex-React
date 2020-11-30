@@ -23,7 +23,7 @@
   background-color: var(--water);
 }
 
-.normal{
+.normal {
   background-color: var(--normal);
 }
 
@@ -35,7 +35,7 @@
   background-color: var(--psychic);
 }
 
-.grass{
+.grass {
   background-color: var(--grass);
 }
 
@@ -43,7 +43,7 @@
   background-color: var(--ice);
 }
 
-.rock{
+.rock {
   background-color: var(--rock);
 }
 
@@ -75,8 +75,8 @@
   background-color: var(--fairy);
 }
 
-.ground{
-  background: linear-gradient(180deg,var(--ground1) 50%, var(--ground2) 50%);
+.ground {
+  background: linear-gradient(180deg, var(--ground1) 50%, var(--ground2) 50%);
 }
 
 .flying {

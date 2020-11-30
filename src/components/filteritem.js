@@ -12,13 +12,6 @@ const FilterItem = props => {
   const filterClick = event => {
     const { target: clickedFilter } = event;
 
-    // const previousFilter = document.getElementById(props.filter);
-    // if (previousFilter !== null && previousFilter !== clickedFilter) {
-    //   previousFilter.classList.toggle(FilterItemStyles.Selected);
-    // }
-
-    // clickedFilter.classList.toggle(FilterItemStyles.Selected);
-
     if (clickedFilter.id === filter) {
       props.updateFilter('All');
     } else {
