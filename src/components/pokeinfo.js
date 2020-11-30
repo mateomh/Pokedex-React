@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import PokeInfoStyles from './styles/pokeinfo.module.css';
 import TypeBadge from './typebadge';
-import PokeDexItem from './pokedexitem';
+import PokeName from './pokename';
 
 const PokeInfo = props => {
   const { pokemon } = props;
@@ -22,7 +22,7 @@ const PokeInfo = props => {
     <div className={PokeInfoStyles.Card}>
       {/* <p className={PokeInfoStyles.Name}>{name}</p> */}
       <div className={PokeInfoStyles.Name}>
-        <PokeDexItem image={imagesm} name={name} number={id} />
+        <PokeName image={imagesm} name={name} number={id} />
       </div>
       <img className={PokeInfoStyles.Image} src={imagelg} alt="pokemon big" />
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Type</p>
