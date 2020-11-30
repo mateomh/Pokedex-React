@@ -11,6 +11,7 @@ import * as Actions from './actions/actions';
 import getPokemonsInStore from './modules/storeops';
 import AppStyles from './components/styles/app.module.css';
 import PokeFilter from './components/pokefilter';
+import PokeLogo from './components/pokelogo';
 
 const store = createStore(
   rootReducer,
@@ -29,8 +30,10 @@ dataInit();
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <PokeFilter />
-      <Routes />
+      <div className={AppStyles.Container}>
+        <PokeLogo />
+        <Routes />
+      </div>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root'),

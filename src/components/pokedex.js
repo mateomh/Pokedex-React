@@ -10,6 +10,7 @@ import * as ApiComms from '../modules/apicomms';
 import * as Actions from '../actions/actions';
 import PokeDexItem from './pokedexitem';
 import AppStyles from './styles/app.module.css';
+import PokeFilter from './pokefilter';
 
 const PokeDex = props => {
   const { pokemons, page } = props;
@@ -22,7 +23,8 @@ const PokeDex = props => {
   };
 
   return (
-    <div className={AppStyles.Container}>
+    <>
+      <PokeFilter />
       {pokemons.map((pokemon, index) => (
         <PokeDexItem
           key={pokemon.name}
@@ -32,7 +34,7 @@ const PokeDex = props => {
           number={(index + 1) * page}
         />
       ))}
-    </div>
+    </>
   );
 };
 

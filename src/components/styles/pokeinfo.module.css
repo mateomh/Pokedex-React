@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  background: linear-gradient(45deg, white 0% 50%, rgba(235, 50, 34, 0.8) 60% 100%);
+  /* background: linear-gradient(45deg, white 0% 50%, rgba(235, 50, 34, 0.8) 60% 100%); */
   padding: 5vh;
   margin: 5vh;
   height: 90vh;
