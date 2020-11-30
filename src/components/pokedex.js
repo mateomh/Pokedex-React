@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable no-undef */
@@ -5,7 +6,7 @@
 /* eslint-disable no-unused-vars */
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import * as ApiComms from '../apicomms/apicomms';
+import * as ApiComms from '../modules/apicomms';
 import * as Actions from '../actions/actions';
 import PokeDexItem from './pokedexitem';
 import AppStyles from './styles/app.module.css';
@@ -13,28 +14,10 @@ import AppStyles from './styles/app.module.css';
 const PokeDex = props => {
   const { pokemons, page } = props;
 
-  const clickHandle = async selectedPokemon => {
-    const pokemonInfo = await ApiComms.getOnePokemonInfo(selectedPokemon);
-    const {
-      id,
-      name,
-      sprites: { front_default: imagesm },
-      sprites: { other: { dream_world: { front_default: imagelg } } },
-      types,
-      weight,
-      height,
-    } = pokemonInfo;
+  const clickHandle = selectedPokemon => {
+    const pokemonInfo = pokemons.find(pokemon => pokemon.name === selectedPokemon);
 
-    const pokemon = {
-      id,
-      name,
-      imagesm,
-      imagelg,
-      types,
-      weight,
-      height,
-    };
-    props.updatePokemon(pokemon);
+    props.updatePokemon(pokemonInfo);
     props.history.push('/info');
   };
 
@@ -44,6 +27,7 @@ const PokeDex = props => {
         <PokeDexItem
           key={pokemon.name}
           clickFcn={clickHandle}
+          image={pokemon.imagesm}
           name={pokemon.name}
           number={(index + 1) * page}
         />
@@ -54,6 +38,7 @@ const PokeDex = props => {
 
 const mapDispatchToProps = dispatch => ({
   updatePokemon: pokemon => dispatch(Actions.currentPokemon(pokemon)),
+  addPokemon: pokemon => dispatch(Actions.addPokemon(pokemon)),
 });
 
 const mapStateToProps = state => ({
@@ -65,6 +50,7 @@ PokeDex.propTypes = {
   pokemons: PropTypes.array.isRequired,
   page: PropTypes.number.isRequired,
   updatePokemon: PropTypes.func.isRequired,
+  addPokemon: PropTypes.func.isRequired,
   history: PropTypes.any.isRequired,
 };
 
