@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as Actions from '../actions/actions';
 import TypeBadge from './typebadge';
 import FilterItemStyles from './styles/filteritem.module.css';
 
@@ -8,9 +11,14 @@ const FilterItem = props => {
   const { type } = props;
 
   const filterClick = event => {
-    const { target: filter } = event;
-    console.log(filter.id);
-    filter.classList.toggle(FilterItemStyles.Selected);
+    const { target: clickedFilter } = event;
+
+    clickedFilter.classList.toggle(FilterItemStyles.Selected);
+    if (clickedFilter.id === props.filter) {
+      props.updateFilter('All');
+    } else {
+      props.updateFilter(clickedFilter.id);
+    }
   };
 
   return (
@@ -22,6 +30,16 @@ const FilterItem = props => {
 
 FilterItem.propTypes = {
   type: PropTypes.string.isRequired,
+  updateFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
-export default FilterItem;
+const mapDisptachToProps = dispatch => ({
+  updateFilter: filter => dispatch(Actions.changeFilter(filter)),
+});
+
+const mapStateToProps = state => ({
+  filter: state.filter,
+});
+
+export default connect(mapStateToProps, mapDisptachToProps)(FilterItem);
