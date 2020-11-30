@@ -8,7 +8,6 @@ import PokeDexItem from './pokedexitem';
 
 const PokeInfo = props => {
   const { pokemon } = props;
-  console.log(pokemon);
   const {
     id,
     name,

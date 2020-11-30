@@ -10,6 +10,7 @@ import * as ApiComms from './modules/apicomms';
 import * as Actions from './actions/actions';
 import getPokemonsInStore from './modules/storeops';
 import AppStyles from './components/styles/app.module.css';
+import PokeFilter from './components/pokefilter';
 
 const store = createStore(
   rootReducer,
@@ -28,6 +29,7 @@ dataInit();
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
+      <PokeFilter />
       <Routes />
     </React.StrictMode>
   </Provider>,
