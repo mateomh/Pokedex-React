@@ -21,6 +21,7 @@ const PokeInfo = props => {
   return (
     <div className={PokeInfoStyles.Card}>
       {/* <p className={PokeInfoStyles.Name}>{name}</p> */}
+      <a href="/" className={PokeInfoStyles.Back}> &lt; Back </a>
       <div className={PokeInfoStyles.Name}>
         <PokeName image={imagesm} name={name} number={id} />
       </div>

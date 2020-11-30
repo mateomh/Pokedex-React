@@ -24,7 +24,7 @@
 }
 
 .Name {
-  font-size: 4vh;
+  font-size: 2vw;
   width: 60%;
   background-color: black;
   color: whitesmoke;
@@ -34,7 +34,7 @@
 }
 
 .Number {
-  font-size: 4vh;
+  font-size: 2vw;
   background-color: var(--color-4);
   color: whitesmoke;
   width: 30%;
