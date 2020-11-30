@@ -1,8 +1,8 @@
 @import url("../../assets/stylesheets/general.css");
 
 .Container {
-  background: linear-gradient(45deg, white 0% 50%, rgba(235, 50, 34, 0.8) 60% 100%);
+  background: linear-gradient(45deg, white 0% 40%, rgba(235, 50, 34, 0.8) 50% 100%);
   margin: 0 auto;
-  padding: 0 5vh;
-  width: 90%;
+  padding: 0 5vh 3vh 5vh;
+  width: 100%;
 }

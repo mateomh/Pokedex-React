@@ -1,14 +1,15 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/forbid-prop-types */
-/* eslint-disable no-unused-vars */
+
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import PokeInfoStyles from './styles/pokeinfo.module.css';
 import TypeBadge from './typebadge';
-import PokeDexItem from './pokedexitem';
+import PokeName from './pokename';
 
 const PokeInfo = props => {
   const { pokemon } = props;
-  console.log(pokemon);
   const {
     id,
     name,
@@ -19,17 +20,19 @@ const PokeInfo = props => {
     height,
   } = pokemon;
 
+  const backClick = () => {
+    props.history.push('/');
+  };
+
   return (
     <div className={PokeInfoStyles.Card}>
-      {/* <p className={PokeInfoStyles.Name}>{name}</p> */}
+      <div className={PokeInfoStyles.Back} onClick={backClick}>&lt; Back</div>
       <div className={PokeInfoStyles.Name}>
-        <PokeDexItem image={imagesm} name={name} number={id} />
+        <PokeName image={imagesm} name={name} number={id} />
       </div>
       <img className={PokeInfoStyles.Image} src={imagelg} alt="pokemon big" />
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Type</p>
       <div className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Data}`}>
-        {/* <TypeBadge type={type1} />
-        {type2 && <TypeBadge type={type2} />} */}
         {types.map(type => (
           <TypeBadge key={type} type={type} />
         ))}
@@ -44,6 +47,7 @@ const PokeInfo = props => {
 
 PokeInfo.propTypes = {
   pokemon: PropTypes.object.isRequired,
+  history: PropTypes.any.isRequired,
 };
 
 const mapStateToProps = state => ({

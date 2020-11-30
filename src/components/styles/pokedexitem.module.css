@@ -24,22 +24,22 @@
 }
 
 .Name {
-  font-size: 4vh;
+  font-size: 2vw;
   width: 60%;
   background-color: black;
   color: whitesmoke;
-  border-radius: 0px 50px 50px 0px;
+  border-radius: 0 50px 50px 0;
   text-align: center;
   font-family: 'Prompt', sans-serif;
 }
 
 .Number {
-  font-size: 4vh;
+  font-size: 2vw;
   background-color: var(--color-4);
   color: whitesmoke;
   width: 30%;
   padding: 0 3vh;
-  border-radius: 50px 0px 0px 50px;
+  border-radius: 50px 0 0 50px;
   font-weight: bolder;
   font-family: 'Prompt', sans-serif;
 }

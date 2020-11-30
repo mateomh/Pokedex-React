@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/jsx-tag-spacing */
 import PropTypes from 'prop-types';
+import PokeName from './pokename';
 import PokeDexItemStyles from './styles/pokedexitem.module.css';
 
 const PokeDexItem = props => {
@@ -14,12 +15,7 @@ const PokeDexItem = props => {
 
   return (
     <div className={PokeDexItemStyles.Item} id={number} onClick={() => clickFcn(name)} >
-      {image && <img className={PokeDexItemStyles.Image} src={image} alt="pokemon" />}
-      <p className={PokeDexItemStyles.Number}>
-        N°&nbsp;&nbsp;
-        {number}
-      </p>
-      <p className={PokeDexItemStyles.Name}>{name}</p>
+      <PokeName image={image} name={name} number={number} />
     </div>
   );
 };
