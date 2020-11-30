@@ -7,26 +7,33 @@ import TypeBadge from './typebadge';
 import FilterItemStyles from './styles/filteritem.module.css';
 
 const FilterItem = props => {
-  const { type } = props;
+  const { type, filter } = props;
 
   const filterClick = event => {
     const { target: clickedFilter } = event;
 
-    const previousFilter = document.getElementById(props.filter);
-    if (previousFilter !== null && previousFilter !== clickedFilter) {
-      previousFilter.classList.toggle(FilterItemStyles.Selected);
-    }
+    // const previousFilter = document.getElementById(props.filter);
+    // if (previousFilter !== null && previousFilter !== clickedFilter) {
+    //   previousFilter.classList.toggle(FilterItemStyles.Selected);
+    // }
 
-    clickedFilter.classList.toggle(FilterItemStyles.Selected);
-    if (clickedFilter.id === props.filter) {
+    // clickedFilter.classList.toggle(FilterItemStyles.Selected);
+
+    if (clickedFilter.id === filter) {
       props.updateFilter('All');
     } else {
       props.updateFilter(clickedFilter.id);
     }
   };
 
+  let itemClass = `${FilterItemStyles.Item}`;
+
+  if (type === filter) {
+    itemClass = itemClass.concat(` ${FilterItemStyles.Selected}`);
+  }
+
   return (
-    <div className={FilterItemStyles.Item} onClick={filterClick} role="button" id={type}>
+    <div className={itemClass} onClick={filterClick} role="button" id={type}>
       <TypeBadge type={type} />
     </div>
   );
