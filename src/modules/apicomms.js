@@ -6,7 +6,7 @@ const getDataFromApi = async url => {
   return data;
 };
 
-const getPokemons = async (page = 1, numberperpage = 10) => {
+const getPokemons = async (page = 1, numberperpage = 151) => {
   const paginationparams = `?limit=${numberperpage}&offset=${(page - 1) * numberperpage}`;
   const pokemonUrl = endpointUrl.concat(paginationparams);
 

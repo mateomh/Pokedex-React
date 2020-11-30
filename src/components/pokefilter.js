@@ -1,5 +1,5 @@
-import TypeBadge from './typebadge';
 import PokeFilterStyles from './styles/pokefilter.module.css';
+import FilterItem from './filteritem';
 
 const PokeFilter = () => {
   let allTypes = ['normal', 'poison', 'psychic', 'grass', 'ground'];
@@ -10,7 +10,7 @@ const PokeFilter = () => {
     <div className={PokeFilterStyles.Bar}>
       <h2 className={PokeFilterStyles.Title}>Filter By Type</h2>
       {allTypes.map(type => (
-        <TypeBadge key={type} type={type} />
+        <FilterItem key={type} type={type} />
       ))}
     </div>
   );

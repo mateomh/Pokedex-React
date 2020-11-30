@@ -22,16 +22,18 @@ const PokeDex = props => {
     props.history.push('/info');
   };
 
+  const sortedPokemons = pokemons.sort((a, b) => a.id - b.id);
+
   return (
     <>
       <PokeFilter />
-      {pokemons.map((pokemon, index) => (
+      {sortedPokemons.map((pokemon, index) => (
         <PokeDexItem
           key={pokemon.name}
           clickFcn={clickHandle}
           image={pokemon.imagesm}
           name={pokemon.name}
-          number={(index + 1) * page}
+          number={pokemon.id}
         />
       ))}
     </>
