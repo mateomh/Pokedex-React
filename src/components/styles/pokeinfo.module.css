@@ -58,7 +58,9 @@
   color: white;
   font-size: 2vw;
   font-weight: bolder;
+  font-family: 'Prompt', sans-serif;
   width: 30%;
   height: 30%;
   border-radius: 50px;
+  cursor: pointer;
 }

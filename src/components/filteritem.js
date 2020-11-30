@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { connect } from 'react-redux';

@@ -15,12 +15,6 @@ const PokeDexItem = props => {
 
   return (
     <div className={PokeDexItemStyles.Item} id={number} onClick={() => clickFcn(name)} >
-      {/* {image && <img className={PokeDexItemStyles.Image} src={image} alt="pokemon" />}
-      <p className={PokeDexItemStyles.Number}>
-        N°&nbsp;&nbsp;
-        {number}
-      </p>
-      <p className={PokeDexItemStyles.Name}>{name}</p> */}
       <PokeName image={image} name={name} number={number} />
     </div>
   );

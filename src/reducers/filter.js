@@ -1,7 +1,6 @@
 const defaultState = 'All';
 
 const filterReducer = (state = defaultState, action) => {
-  // eslint-disable-next-line no-unused-vars
   const { type, payload: filter } = action;
 
   switch (type) {
