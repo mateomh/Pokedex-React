@@ -31,7 +31,7 @@ const PokeInfo = props => {
         {/* <TypeBadge type={type1} />
         {type2 && <TypeBadge type={type2} />} */}
         {types.map(type => (
-          <TypeBadge key={type.type.name} type={type.type.name} />
+          <TypeBadge key={type} type={type} />
         ))}
       </div>
       <p className={`${PokeInfoStyles.Info} ${PokeInfoStyles.Title}`}>Height (m)</p>

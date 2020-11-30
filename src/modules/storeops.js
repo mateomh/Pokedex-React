@@ -13,12 +13,14 @@ const getPokemonsInStore = async (pokemon, dispatchFcn) => {
     height,
   } = pokemonInfo;
 
+  const newTypes = types.map(item => item.type.name);
+
   const onePokemon = {
     id,
     name,
     imagesm,
     imagelg,
-    types,
+    types: newTypes,
     weight,
     height,
   };
