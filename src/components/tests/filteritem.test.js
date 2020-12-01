@@ -1,9 +1,8 @@
-/* eslint-disable react/forbid-foreign-prop-types */
 import { render, screen } from '@testing-library/react';
 import FilterItem from '../filteritem';
 import * as Utils from './utils';
 
-describe('TypeBadge Component', () => {
+describe('FilterItem Component', () => {
   beforeEach(() => {
     const mockState = {
       filter: 'My Filter',
