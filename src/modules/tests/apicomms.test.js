@@ -3,17 +3,17 @@ import * as ApiComms from '../apicomms';
 describe('Api communications module', () => {
   it(
     '1. Checks the get pokemons method',
-    () => {
-      const data = ApiComms.getPokemons(1, 3);
-      expect(data).toBeInstanceOf(Promise);
+    async () => {
+      const data = await ApiComms.getPokemons(1, 3);
+      expect(data).toBeInstanceOf(Object);
     },
   );
 
   it(
     '2. Checks the get one pokemon info method',
-    () => {
-      const data = ApiComms.getOnePokemonInfo('bulbasaur');
-      expect(data).toBeInstanceOf(Promise);
+    async () => {
+      const data = await ApiComms.getOnePokemonInfo('bulbasaur');
+      expect(data.name).toBe('bulbasaur');
     },
   );
 });
