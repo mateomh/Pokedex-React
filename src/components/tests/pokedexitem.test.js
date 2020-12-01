@@ -13,8 +13,8 @@ describe('PokeDexItem Component', () => {
         image=""
         clickFcn={() => {}}
       />);
-      const logo = screen.getByText('Defaulty');
-      expect(logo).toBeDefined();
+      const item = screen.getByText('Defaulty');
+      expect(item).toBeDefined();
     },
   );
 
@@ -25,6 +25,23 @@ describe('PokeDexItem Component', () => {
       expect(PokeDexItem.propTypes.number).toBe(PropTypes.number.isRequired);
       expect(PokeDexItem.propTypes.name).toBe(PropTypes.string.isRequired);
       expect(PokeDexItem.propTypes.image).toBe(PropTypes.string);
+    },
+  );
+
+  it(
+    '3. Checks the callback function is called when clicked',
+    () => {
+      const mockCallback = jest.fn();
+      render(<PokeDexItem
+        name="Defaulty"
+        number={50}
+        image=""
+        clickFcn={mockCallback}
+      />);
+      const item = screen.getByText('Defaulty');
+      expect(item).toBeDefined();
+      item.click();
+      expect(mockCallback).toHaveBeenCalled();
     },
   );
 });
