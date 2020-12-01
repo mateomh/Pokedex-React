@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { createStore } from 'redux';
 import FilterItem from '../filteritem';
-import * as Utils from './utils';
+import rootReducer from '../../reducers/root';
 
 describe('FilterItem Component', () => {
   beforeEach(() => {
@@ -11,7 +12,7 @@ describe('FilterItem Component', () => {
       currentPokemon: 'Defaulty',
     };
 
-    const mockStore = Utils.testStore(mockState);
+    const mockStore = createStore(rootReducer, mockState);
     render(<FilterItem store={mockStore} type="My Filter" />);
   });
 
