@@ -1,13 +1,23 @@
+/* eslint-disable prefer-const */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable camelcase */
-import { connect } from 'react-redux';
+import { useEffect } from 'react';
+import { connect, useStore } from 'react-redux';
 import PropTypes from 'prop-types';
+import { dataInit } from '../modules/storeops';
 import * as Actions from '../actions/actions';
 import PokeDexItem from './pokedexitem';
 import PokeFilter from './pokefilter';
 
 const PokeDex = props => {
-  const { pokemons, filter: filterValue } = props;
+  let { pokemons, filter: filterValue } = props;
+  const store = useStore();
+
+  useEffect(() => {
+    if (pokemons.length === 0) {
+      dataInit(store);
+    }
+  }, []);
 
   const clickHandle = selectedPokemon => {
     const pokemonInfo = pokemons.find(pokemon => pokemon.name === selectedPokemon);

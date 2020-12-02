@@ -27,4 +27,11 @@ const getPokemonsInStore = async (pokemon, dispatchFcn) => {
   dispatchFcn(Actions.addPokemon(onePokemon));
 };
 
-export default getPokemonsInStore;
+const dataInit = async store => {
+  const { results: pokemons } = await ApiComms.getPokemons(1);
+  pokemons.forEach(pokemon => {
+    getPokemonsInStore(pokemon, store.dispatch);
+  });
+};
+
+export { getPokemonsInStore, dataInit };
