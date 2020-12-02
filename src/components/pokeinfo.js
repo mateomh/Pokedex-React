@@ -10,6 +10,11 @@ import PokeName from './pokename';
 
 const PokeInfo = props => {
   const { pokemon } = props;
+
+  if (Object.keys(pokemon).length === 0) {
+    props.history.push('/');
+  }
+
   const {
     id,
     name,
