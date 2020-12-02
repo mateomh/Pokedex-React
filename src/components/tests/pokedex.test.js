@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import renderer from 'react-test-renderer';
 import rootReducer from '../../reducers/root';
 import PokeDex from '../pokedex';
 

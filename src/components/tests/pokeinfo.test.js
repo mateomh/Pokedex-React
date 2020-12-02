@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import rootReducer from '../../reducers/root';
 import PokeInfo from '../pokeinfo';
 
-describe('PokeDex Component', () => {
+describe('PokeInfo Component', () => {
   beforeEach(() => {
     const mockState = {
       filter: 'All',
