@@ -47,7 +47,11 @@ const PokeInfo = props => {
 
 PokeInfo.propTypes = {
   pokemon: PropTypes.object.isRequired,
-  history: PropTypes.any.isRequired,
+  history: PropTypes.any,
+};
+
+PokeInfo.defaultProps = {
+  history: undefined,
 };
 
 const mapStateToProps = state => ({

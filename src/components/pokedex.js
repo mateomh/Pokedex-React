@@ -66,7 +66,11 @@ PokeDex.propTypes = {
   pokemons: PropTypes.array.isRequired,
   filter: PropTypes.string.isRequired,
   updatePokemon: PropTypes.func.isRequired,
-  history: PropTypes.any.isRequired,
+  history: PropTypes.any,
+};
+
+PokeDex.defaultProps = {
+  history: undefined,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PokeDex);
