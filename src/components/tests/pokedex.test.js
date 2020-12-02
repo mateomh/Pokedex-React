@@ -6,6 +6,7 @@ import rootReducer from '../../reducers/root';
 import PokeDex from '../pokedex';
 
 describe('PokeDex Component', () => {
+  let mockStore;
   beforeEach(() => {
     const pokemons = [
       {
@@ -23,7 +24,7 @@ describe('PokeDex Component', () => {
       currentPokemon: 'Defaulty',
     };
 
-    const mockStore = createStore(rootReducer, mockState);
+    mockStore = createStore(rootReducer, mockState);
     render(
       <Provider store={mockStore}>
         <PokeDex />
@@ -36,6 +37,20 @@ describe('PokeDex Component', () => {
     () => {
       const PokeName = screen.getByText('Defaulty');
       expect(PokeName).toBeDefined();
+    },
+  );
+
+  it(
+    '2. Checks it renders correctly against a snapshot',
+    () => {
+      const tree = renderer
+        .create(
+          <Provider store={mockStore}>
+            <PokeDex />
+          </Provider>,
+        )
+        .toJSON();
+      expect(tree).toMatchSnapshot();
     },
   );
 });
