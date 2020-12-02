@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeInfo Component 2. Checks it renders correctly against a snapshot 1`] = `
+<div
+  className="Card"
+>
+  <div
+    className="Back"
+    onClick={[Function]}
+  >
+    &lt; Back
+  </div>
+  <div
+    className="Name"
+  >
+    
+    <p
+      className="Number"
+    >
+      N°  
+      5000
+    </p>
+    <p
+      className="Name"
+    >
+      Defaulty
+    </p>
+  </div>
+  <img
+    alt="pokemon big"
+    className="Image"
+  />
+  <p
+    className="Info Title"
+  >
+    Type
+  </p>
+  <div
+    className="Info Data"
+  >
+    <div
+      className="1 Badge"
+    >
+      1
+    </div>
+    <div
+      className="2 Badge"
+    >
+      2
+    </div>
+  </div>
+  <p
+    className="Info Title"
+  >
+    Height (m)
+  </p>
+  <p
+    className="Info Data"
+  >
+    NaN
+  </p>
+  <p
+    className="Info Title"
+  >
+    Weight (Kg)
+  </p>
+  <p
+    className="Info Data"
+  >
+    NaN
+  </p>
+</div>
+`;
