@@ -2,7 +2,7 @@
 
 # PokeDex
 
-> This project is a PokeDex featuring the original 151 Pokemon from Gen1 made with REACT and REDUX..
+> This project is a PokeDex featuring the original 151 Pokemon from Gen1 made with REACT and REDUX.
 
 ![screenshot](./src/assets/images/logo1.png)
 
@@ -25,21 +25,21 @@ When you fire up the application you are welcomed by the full Pokemon types that
 
 ![screenshot](./src/assets/screenshots/filters.png)
 
-Below this you can see the full list of the Gen 1 pokemons, each of them displaying their pokedex number and their name as well as an small image next to it.
+Below this, you can see the full list of the Gen 1 pokemon, each of them displaying their Pokedex number and their name as well as a small image next to it.
 
 ![screenshot](./src/assets/screenshots/pokemonlist.png)
 
-When you click on any of the badges for the types, the list gets reduced to the list of pokemons that have that specific type and the badge that is selected will be highlighted to let you know which filter is active.
+When you click on any of the badges for the types, the list gets reduced to the list of pokemon that have that specific type and the badge that is selected will be highlighted to let you know which filter is active.
 
 ![screenshot](./src/assets/screenshots/filteredpokemonlist.png)
 
-Once you click back on the higlighted badge the filter will clear and the full list of pokemons wil show again.
+Once you click back on the highlighted badge the filter will clear and the full list of pokemon will show again.
 
-When you click on any of the pokemon listed, you will be taken to the information page for that pokemon, where you can see a bigger image of it and the information about its types, weight and height.
+When you click on any of the pokemon listed, you will be taken to the information page for that pokemon, where you can see a bigger image of it and the information about its types, weight, and height.
 
 ![screenshot](./src/assets/screenshots/filteredpokemonlist.png)
 
-By clicking the back button in the information page you will go to the list that you had before, either if it was the full list or a filtered one.
+By clicking the back button on the information page you will go to the list that you had before, either if it was the full list or a filtered one.
 
 ## Setup Locally
 
@@ -86,7 +86,7 @@ Then you can just run the following command and see the results
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
