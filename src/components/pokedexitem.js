@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/jsx-tag-spacing */
 import PropTypes from 'prop-types';
 import PokeName from './pokename';
 import PokeDexItemStyles from './styles/pokedexitem.module.css';
@@ -14,7 +13,7 @@ const PokeDexItem = props => {
   } = props;
 
   return (
-    <div className={PokeDexItemStyles.Item} id={number} onClick={() => clickFcn(name)} >
+    <div className={PokeDexItemStyles.Item} id={number} onClick={() => clickFcn(name)}>
       <PokeName image={image} name={name} number={number} />
     </div>
   );
