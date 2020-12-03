@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import PokeDex from './components/pokedex';
-import PokeInfo from './components/pokeinfo';
+import PokeDex from './containers/pokedex';
+import PokeInfo from './containers/pokeinfo';
 
 const Routes = () => (
   <BrowserRouter>
