@@ -1,0 +1,18 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Item {
+  display: inline-flex;
+  padding: 1vh;
+}
+
+.Item:hover {
+  cursor: pointer;
+}
+
+.Item > * {
+  pointer-events: none;
+}
+
+.Selected {
+  background-color: rgb(0, 0, 0, 0.5);
+}

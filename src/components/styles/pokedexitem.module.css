@@ -1,0 +1,45 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  height: 7vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.Item:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.Item > * {
+  pointer-events: none;
+}
+
+.Image {
+  transform: scale(1);
+}
+
+.Name {
+  font-size: 2vw;
+  width: 60%;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 0 50px 50px 0;
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+}
+
+.Number {
+  font-size: 2vw;
+  background-color: var(--color-4);
+  color: whitesmoke;
+  width: 30%;
+  padding: 0 3vh;
+  border-radius: 50px 0 0 50px;
+  font-weight: bolder;
+  font-family: 'Prompt', sans-serif;
+}

@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PokeDex
 
-## Available Scripts
+> This project is a PokeDex featuring the original 151 Pokemon from Gen1 made with REACT and REDUX.
 
-In the project directory, you can run:
+![screenshot](./src/assets/images/logo1.png)
 
-### `yarn start`
+All the information for the application is pulled from the [PokeAPI](https://pokeapi.co/docs/v2) and filtered to take only the information that is going to be presented. This is a capstone project for the React-Redux module from the Microverse technical curriculum, the specifications from this project come from the **Catalogue of Recipes** capstone.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React,
+- Redux,
+- Jest,
+- PokeAPI
 
-### `yarn test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[PokeDex Link](https://pokedex-mm.herokuapp.com/)
 
-### `yarn build`
+# How to use it
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When you fire up the application you are welcomed by the full Pokemon types that you can filter the list by.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![screenshot](./src/assets/screenshots/filters.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Below this, you can see the full list of the Gen 1 pokemon, each of them displaying their Pokedex number and their name as well as a small image next to it.
 
-### `yarn eject`
+![screenshot](./src/assets/screenshots/pokemonlist.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When you click on any of the badges for the types, the list gets reduced to the list of pokemon that have that specific type and the badge that is selected will be highlighted to let you know which filter is active.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![screenshot](./src/assets/screenshots/filteredpokemonlist.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Once you click back on the highlighted badge the filter will clear and the full list of pokemon will show again.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+When you click on any of the pokemon listed, you will be taken to the information page for that pokemon, where you can see a bigger image of it and the information about its types, weight, and height.
 
-## Learn More
+![screenshot](./src/assets/screenshots/filteredpokemonlist.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+By clicking the back button on the information page you will go to the list that you had before, either if it was the full list or a filtered one.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup Locally
 
-### Code Splitting
+To run the application locally you will need to follow several steps to make it work.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+First, you have to check if you have **nodejs** installed on your machine. For this type the following command in your terminal:
 
-### Analyzing the Bundle Size
+> node -v
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If **command not found** shows as a response, then go to [nodejs.org](https://nodejs.org/en/) and follow the instructions to install it. After completing the installation the same command should show you a version number.
 
-### Making a Progressive Web App
+Then clone the [repository](https://github.com/mateomh/Pokedex-React.git) into your local drive and open a terminal in the root folder of the project and install the necessary packages to make it work by running this command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> npm install
 
-### Advanced Configuration
+This will get the project ready to run. After this run the following command to start the development server on **localhost:3000/** and wait for the browser to open:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> npm start
 
-### Deployment
+If the browser does not open or you close it by accident, but the server is still running you can type **localhost:3000/** in your address bar to get into the application again.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project has a suite of tests built-in.
+
+To run the tests clone the [repository](https://github.com/mateomh/Pokedex-React.git) into your local drive, if you haven't done so, and open a terminal in the root folder of the project and install the necessary packages to make it work by running this command:
+
+> npm install
+
+Then you can just run the following command and see the results
+
+> npm test
+
+
+## Authors
+
+👤 **Mateo mojica**
+
+- Github: [@mateomh](https://github.com/mateomh)
+- Twitter: [@mateo_m_h](https://twitter.com/mateo_m_h)
+- Linkedin: [Mateo mojica](https://linkedin.com/mateo_mojica_hernandez)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- PokeAPI
+- The Pokemon Company
+- [Dave Ceddia](https://www.youtube.com/channel/UCPrkHuq0i1WflifRXUpvNmg)
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.

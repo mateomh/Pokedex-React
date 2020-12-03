@@ -1,0 +1,19 @@
+@import url("../../assets/stylesheets/general.css");
+
+.Bar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5vh;
+  text-align: center;
+
+  /* background: linear-gradient(45deg, white 0% 19%, rgba(235, 50, 34, 0.8) 30% 100%); */
+}
+
+.Title {
+  color: whitesmoke;
+  font-size: 5vh;
+  font-weight: bold;
+  font-family: 'Prompt', sans-serif;
+  letter-spacing: 0.6vh;
+  margin: 4vh;
+}

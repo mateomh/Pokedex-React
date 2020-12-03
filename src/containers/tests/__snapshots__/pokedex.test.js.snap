@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeDex Component 2. Checks it renders correctly against a snapshot 1`] = `
+Array [
+  <div
+    className="Bar"
+  >
+    <h2
+      className="Title"
+    >
+      Filter By Type
+    </h2>
+    <div
+      className="Item"
+      id="normal"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="normal Badge"
+      >
+        NORMAL
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="poison"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="poison Badge"
+      >
+        POISON
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="psychic"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="psychic Badge"
+      >
+        PSYCHIC
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="grass"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="grass Badge"
+      >
+        GRASS
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="ground"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="ground Badge"
+      >
+        GROUND
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="ice"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="ice Badge"
+      >
+        ICE
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="fire"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="fire Badge"
+      >
+        FIRE
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="rock"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="rock Badge"
+      >
+        ROCK
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="dragon"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="dragon Badge"
+      >
+        DRAGON
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="water"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="water Badge"
+      >
+        WATER
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="bug"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bug Badge"
+      >
+        BUG
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="dark"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="dark Badge"
+      >
+        DARK
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="fighting"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="fighting Badge"
+      >
+        FIGHTING
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="ghost"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="ghost Badge"
+      >
+        GHOST
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="steel"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="steel Badge"
+      >
+        STEEL
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="flying"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="flying Badge"
+      >
+        FLYING
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="electric"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="electric Badge"
+      >
+        ELECTRIC
+      </div>
+    </div>
+    <div
+      className="Item"
+      id="fairy"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="fairy Badge"
+      >
+        FAIRY
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Item"
+    id={5000}
+    onClick={[Function]}
+  >
+    
+    <p
+      className="Number"
+    >
+      N°  
+      5000
+    </p>
+    <p
+      className="Name"
+    >
+      Defaulty
+    </p>
+  </div>,
+]
+`;
