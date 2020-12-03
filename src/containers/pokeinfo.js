@@ -4,8 +4,8 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import PokeInfoStyles from './styles/pokeinfo.module.css';
-import TypeBadge from './typebadge';
-import PokeName from './pokename';
+import TypeBadge from '../components/typebadge';
+import PokeName from '../components/pokename';
 
 const PokeInfo = props => {
   const { pokemon } = props;

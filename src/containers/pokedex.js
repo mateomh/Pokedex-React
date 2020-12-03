@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { dataInit } from '../modules/storeops';
 import * as Actions from '../actions/actions';
 import PokeFilter from './pokefilter';
-import PokedexRenderer from './pokedexrenderer';
+import PokedexRenderer from '../components/pokedexrenderer';
 
 const PokeDex = props => {
   let { pokemons, filter: filterValue } = props;

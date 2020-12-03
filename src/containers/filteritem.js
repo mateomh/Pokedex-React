@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as Actions from '../actions/actions';
-import TypeBadge from './typebadge';
+import TypeBadge from '../components/typebadge';
 import FilterItemStyles from './styles/filteritem.module.css';
 
 const FilterItem = props => {
