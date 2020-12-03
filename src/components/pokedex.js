@@ -1,13 +1,12 @@
 /* eslint-disable prefer-const */
 /* eslint-disable react/forbid-prop-types */
-/* eslint-disable camelcase */
 import { useEffect } from 'react';
 import { connect, useStore } from 'react-redux';
 import PropTypes from 'prop-types';
 import { dataInit } from '../modules/storeops';
 import * as Actions from '../actions/actions';
-import PokeDexItem from './pokedexitem';
 import PokeFilter from './pokefilter';
+import PokedexRenderer from './pokedexrenderer';
 
 const PokeDex = props => {
   let { pokemons, filter: filterValue } = props;
@@ -39,15 +38,7 @@ const PokeDex = props => {
   return (
     <>
       <PokeFilter />
-      {filteredPokemons.map(pokemon => (
-        <PokeDexItem
-          key={pokemon.name}
-          clickFcn={clickHandle}
-          image={pokemon.imagesm}
-          name={pokemon.name}
-          number={pokemon.id}
-        />
-      ))}
+      <PokedexRenderer pokemons={filteredPokemons} clickHandle={clickHandle} />
     </>
   );
 };
