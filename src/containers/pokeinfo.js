@@ -3,7 +3,7 @@
 /* eslint-disable react/forbid-prop-types */
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import PokeInfoStyles from './styles/pokeinfo.module.css';
+import PokeInfoStyles from '../components/styles/pokeinfo.module.css';
 import TypeBadge from '../components/typebadge';
 import PokeName from '../components/pokename';
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PokeFilterStyles from './styles/pokefilter.module.css';
+import PokeFilterStyles from '../components/styles/pokefilter.module.css';
 import FilterItem from './filteritem';
 
 const PokeFilter = () => {
