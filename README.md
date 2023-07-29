@@ -17,7 +17,7 @@ All the information for the application is pulled from the [PokeAPI](https://pok
 
 ## Live Demo
 
-[PokeDex Link](https://pokedex-mm.herokuapp.com/)
+[PokeDex Link](https://pokedex-mateomh.netlify.app/)
 
 # How to use it
 
